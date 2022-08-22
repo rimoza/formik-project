@@ -1,5 +1,5 @@
-import React from "react";
-import { Formik, Form, Field } from "formik";
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
 import {
   Container,
   Card,
@@ -8,14 +8,14 @@ import {
   Button,
   Grid,
   TextField,
-} from "@mui/material";
-import { FormStepper } from "./stepper/FormStepper";
+} from '@mui/material';
+import { FormStepper } from './stepper/FormStepper';
 function App() {
   return (
     <Formik>
       <FormStepper>
-        <Container sx={{ bgcolor: "#87c1ff4d", paddingY: 3, marginTop: 5 }}>
-          <Typography variant="h3" align="center" component="h2">
+        <Container sx={{ bgcolor: '#87c1ff4d', paddingY: 3, marginTop: 5 }}>
+          <Typography variant='h3' align='center' component='h2'>
             Formik Form
           </Typography>
           <Card sx={{ marginTop: 2 }}>
@@ -26,49 +26,49 @@ function App() {
                     <Grid item md={6}>
                       <Field
                         fullWidth
-                        name="firstname"
+                        name='firstname'
                         component={TextField}
-                        label="First Name"
+                        label='First Name'
                       />
                     </Grid>
                     <Grid item md={6}>
                       <Field
                         fullWidth
-                        name="lastname"
+                        name='lastname'
                         component={TextField}
-                        label="Last Name"
+                        label='Last Name'
                       />
                     </Grid>
                   </Grid>
                   <Grid container spacing={2}>
                     <Grid item xs={12}>
-                      <Typography variant="h6" component="h2">
+                      <Typography variant='h6' component='h2'>
                         Add Social Links
                       </Typography>
                     </Grid>
                     <Grid item md={5}>
                       <Field
                         fullWidth
-                        name="linkname"
+                        name='linkname'
                         component={TextField}
-                        label="Link Name"
+                        label='Link Name'
                       />
                     </Grid>
                     <Grid item md={5}>
                       <Field
                         fullWidth
-                        name="linkurl"
+                        name='linkurl'
                         component={TextField}
-                        label="Link URL"
+                        label='Link URL'
                       />
                     </Grid>
                     <Grid item md={2}>
-                      <Button variant="outlined" color="error">
+                      <Button variant='outlined' color='error'>
                         Delete
                       </Button>
                     </Grid>
                     <Grid item>
-                      <Button variant="outlined">Add Link</Button>
+                      <Button variant='outlined'>Add Link</Button>
                     </Grid>
                   </Grid>
                 </Form>
