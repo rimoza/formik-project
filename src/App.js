@@ -7,13 +7,13 @@ import {
   Typography,
   Button,
   Grid,
-  TextField,
 } from '@mui/material';
+import { TextField } from "formik-material-ui";
 import { FormStepper } from './stepper/FormStepper';
 function App() {
+  const linksGroup = {linkname: '', linkurl: ''};
+
   return (
-    <Formik>
-      <FormStepper>
         <Container sx={{ bgcolor: '#87c1ff4d', paddingY: 3, marginTop: 5 }}>
           <Typography variant='h3' align='center' component='h2'>
             Formik Form
@@ -21,6 +21,7 @@ function App() {
           <Card sx={{ marginTop: 2 }}>
             <CardContent sx={{ paddingY: 10, paddingX: 5 }}>
               <Formik>
+              <FormStepper>
                 <Form>
                   <Grid container spacing={2}>
                     <Grid item md={6}>
@@ -72,12 +73,11 @@ function App() {
                     </Grid>
                   </Grid>
                 </Form>
+                </FormStepper>
               </Formik>
             </CardContent>
           </Card>
         </Container>
-      </FormStepper>
-    </Formik>
   );
 }
 
