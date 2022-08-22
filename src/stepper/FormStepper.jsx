@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Form } from "formik";
-import { Button, Stack, Step, StepLabel, Stepper } from "@mui/material";
+import React, { useState } from 'react';
+import { Form } from 'formik';
+import { Button, Stack, Step, StepLabel, Stepper } from '@mui/material';
 
 export const FormStepper = ({ children }) => {
   const stepsArray = React.Children.toArray(children);
@@ -17,17 +17,17 @@ export const FormStepper = ({ children }) => {
         ))}
       </Stepper>
       {currentStep}
-      <Stack direction="row" spacing={2} sx={{ marginTop: 5 }}>
+      <Stack direction='row' spacing={2} sx={{ marginTop: 5 }}>
         <Button
-          variant="outlined"
+          variant='outlined'
           onClick={() => {
             step === 0 ? setStep(1) : setStep(0);
           }}
         >
-          {step === 0 ? "Next" : "Back"}
+          {step === 0 ? 'Next' : 'Back'}
         </Button>
         {step === 1 && (
-          <Button variant="contained" type="submit">
+          <Button variant='contained' type='submit'>
             Submit
           </Button>
         )}
